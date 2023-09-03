@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Users:
+   - Authentication
+   - Registration
+   - User Profile
+   - Account Management
 
-Things you may want to cover:
+2. Tests:
+   - Creating Tests
+   - Editing Tests
+   - Deleting Tests
+   - Viewing a List of Test
 
-* Ruby version
+3. Test Taking:
+   - Choosing a Test to Take
+   - Answering Questions
+   - Evaluating Results
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+4. Admin Panel:
+   - User Management
+   - Monitoring Results
+   - Category Management
+   - Share in social media
