@@ -1,7 +1,30 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Category.create(title: 'Ruby')
+Category.create(title: 'Python')
+Category.create(title: 'Java')
+Category.create(title: 'Math')
+Category.create(title: 'HTML')
+
+Test.create(title: 'Ruby Basics', level: 1, category_id: 1)
+Test.create(title: 'Python Fundamentals', level: 2, category_id: 2)
+Test.create(title: 'Java Programming', level: 3, category_id: 3)
+Test.create(title: 'Math Quiz', level: 4, category_id: 4)
+Test.create(title: 'HTML Essentials', level: 1, category_id: 5)
+
+Question.create(body: 'What is Ruby?', test_id: 1)
+Question.create(body: 'How do you define a Python function?', test_id: 2)
+Question.create(body: 'What is the main feature of Java?', test_id: 3)
+Question.create(body: 'What is 2 + 2?', test_id: 4)
+Question.create(body: 'What does HTML stand for?', test_id: 5)
+
+Answer.create(body: 'Ruby is a dynamic, open-source programming language.', correct: true, question_id: 1)
+Answer.create(body: 'A Python function is defined using the "def" keyword.', correct: true, question_id: 2)
+Answer.create(body: 'Java is known for its "write once, run anywhere" capability.', correct: true, question_id: 3)
+Answer.create(body: '4', correct: true, question_id: 4)
+Answer.create(body: 'HyperText Markup Language', correct: true, question_id: 5)
+
+User.create(result: 10, test_id: 1)
+User.create(result: 9, test_id: 2)
+User.create(result: 8, test_id: 3)
+User.create(result: 7, test_id: 4)
+User.create(result: 6, test_id: 5)
+
