@@ -8,10 +8,15 @@ class Test < ApplicationRecord
   validates :level, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validates :title, presence: true, uniqueness: { scope: :level }
 
-  scope :easy, -> { where(level: 0..1) }
-  scope :middle, -> { where(level: 2..4) }
-  scope :difficult, -> { where(level: 5..Float::INFINITY) }
   scope :by_level, -> (level) { where(level: level) }
 
-  scope :sorted_test_names_by_category, -> (category_name) { joins(:category).where(categories: { title: category_name }).order(title: :desc).pluck(:title) }
+  scope :easy, -> { by_level(0..1) }
+  scope :middle, -> { by_level(2..4) }
+  scope :difficult, -> { by_level(5..Float::INFINITY) }
+
+  scope :test_names_by_category, -> (category_name) { joins(:category).where(categories: { title: category_name }) }
+  def self.sorted_test_names_by_category(category_name)
+    test_names_by_category(category_name).order(title: :desc).pluck(:title)
+  end
 end
+
