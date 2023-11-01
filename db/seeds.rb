@@ -18,5 +18,5 @@ java_test.save
 user_lev.test_id = ruby_test.id
 user_lev.save
 
-question = Question.create(body: 'Are Ruby are object oriented language?', test_id: ruby_test.id)
+question = Question.new(body: 'Are Ruby are object oriented language?', test_id: ruby_test.id)
 answer = Answer.create(body: 'Yes', correct: true, question_id: question.id)
