@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, except: :show
+  before_action :find_test, except: [:show, :edit, :update, :destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
@@ -15,17 +15,36 @@ class QuestionsController < ApplicationController
     @question = @test.questions.new
   end
 
+  def edit
+    @question = Question.find(params[:id])
+  end
+
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      render plain: 'Вопрос был успешно создан!'
+      redirect_to @question
     else
-      render 'new'
+      render :new
+    end
+  end
+
+  def update
+    @question = Question.find(params[:id])
+
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render :edit
     end
   end
 
   def destroy
-    @question = @test.questions.find(params[:id])
+    @question = Question.find(params[:id])
+    @test = @question.test
+
+    @test.questions.delete(@question)
+    @question.destroy
+    redirect_to test_questions_path(@test)
   end
 
   private
