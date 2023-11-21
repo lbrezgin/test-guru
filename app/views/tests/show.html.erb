@@ -5,14 +5,16 @@
 
 <p>
   <strong>Level:</strong>
-  <%= @test.level %>
+  <%= test_level(@test) %>
 </p>
 
-<p>
-  <strong>Questions:</strong><br>
-  <% @test.questions.each do |question| %>
-  <%= question.body %><br>
-  <% end %>
-</p>
-<%= link_to 'Back to all tests', tests_path %>
-<%= link_to 'Actions with questions', test_questions_path(@test) %>
+<h2>Questions</h2>
+
+<%= link_to 'New question', new_test_question_path(@test) %>
+
+<ol>
+  <%= render @test.questions %>
+</ol>
+
+<%= link_to 'Edit', edit_test_path %>
+<%= link_to 'Back', tests_path %>
