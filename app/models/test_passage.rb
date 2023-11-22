@@ -1,11 +1,11 @@
 class TestPassage < ApplicationRecord
+  PASS = 85
 
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
-  before_validation :before_validation_set_first_question, on: :create
-  before_update :before_update_set_next_question
+  before_validation :before_validation_set_question, on: [:create, :update]
 
   def completed?
     current_question.nil?
@@ -18,14 +18,22 @@ class TestPassage < ApplicationRecord
     save!
   end
 
-  private
-
-  def before_update_set_next_question
-    self.current_question = next_question
+  def success?
+    true if self.score >= TestPassage::PASS
   end
 
-  def before_validation_set_first_question
-    self.current_question = test.questions.first if test.present?
+  def score
+    (self.correct_questions * 100) / self.test.questions.count
+  end
+
+  private
+
+  def before_validation_set_question
+    if (test.present?) && (self.current_question == nil)
+      self.current_question = test.questions.first
+    else
+      self.current_question = next_question if self.current_question
+    end
   end
 
   def correct_answer?(answer_ids)
