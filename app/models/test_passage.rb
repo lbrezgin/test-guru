@@ -19,11 +19,11 @@ class TestPassage < ApplicationRecord
   end
 
   def success?
-    true if self.score >= TestPassage::PASS
+    score >= PASS
   end
 
   def score
-    (self.correct_questions * 100) / self.test.questions.count
+    (correct_questions * 100) / test.questions.count
   end
 
   private
