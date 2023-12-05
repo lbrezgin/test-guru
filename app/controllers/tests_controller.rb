@@ -1,5 +1,7 @@
 class TestsController < ApplicationController
 
+  before_action :set_path
+  before_action :authenticate_user!
   before_action :set_test, only: %i[show edit update destroy start]
   before_action :set_user, only: %i[start create]
 
@@ -52,7 +54,7 @@ class TestsController < ApplicationController
   end
 
   def set_user
-    @user = User.first
+    @user = current_user
   end
 
   def test_params

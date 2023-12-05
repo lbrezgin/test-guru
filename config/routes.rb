@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+  get 'users/new'
+
   root 'tests#index'
+
+  get :signup, to: 'users#new'
+  get :login, to: 'sessions#new'
+  delete :login, to: 'sessions#destroy'
+
+  resource :users, only: :create
+  resource :sessions, only: :create
 
   resources :tests do
     resources :questions, shallow: true, except: :index do
@@ -17,4 +27,6 @@ Rails.application.routes.draw do
       get :result #GET /test_passages/1/result
     end
   end
+
 end
+
