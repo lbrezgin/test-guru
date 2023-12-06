@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  include SessionsHelper
 
   skip_before_action :authenticate_user!
 
@@ -13,7 +12,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to session[:return_to] || root_path
     else
-      flash_helper(:alert, 'Are you a Guru? Verify your Email and Password please')
+      flash[:alert] = 'Are you a Guru? Verify your Email and Password please'
       render :new
     end
   end
@@ -23,5 +22,3 @@ class SessionsController < ApplicationController
     redirect_to login_path
   end
 end
-
-
