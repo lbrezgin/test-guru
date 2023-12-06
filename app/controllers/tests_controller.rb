@@ -1,9 +1,6 @@
 class TestsController < ApplicationController
 
-  before_action :set_path
-  before_action :authenticate_user!
   before_action :set_test, only: %i[show edit update destroy start]
-  before_action :set_user, only: %i[start create]
 
   def index
     @tests = Test.all
@@ -18,7 +15,7 @@ class TestsController < ApplicationController
 
   def create
     @test = Test.new(test_params)
-    @test.author = @user
+    @test.author = current_user
     if @test.save
       redirect_to @test
     else
@@ -43,18 +40,14 @@ class TestsController < ApplicationController
   end
 
   def start
-    @user.tests.push(@test)
-    redirect_to @user.test_passage(@test)
+    current_user.tests.push(@test)
+    redirect_to current_user.test_passage(@test)
   end
 
   private
 
   def set_test
     @test = Test.find(params[:id])
-  end
-
-  def set_user
-    @user = current_user
   end
 
   def test_params

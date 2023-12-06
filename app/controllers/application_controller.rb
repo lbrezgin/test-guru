@@ -1,13 +1,14 @@
 class ApplicationController < ActionController::Base
 
-  helper_method :current_user, :logged_in?, :flash_helper, :set_path
+  before_action :authenticate_user!
+  helper_method :current_user, :logged_in?
   private
 
   def authenticate_user!
     unless current_user
-      return redirect_to login_path, alert: "Are you a Guru? Verify your Email and Password please"
+      session[:return_to] = request.fullpath
+      return redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please'
     end
-
     cookies[:email] = current_user.email
   end
 
@@ -17,15 +18,5 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     current_user.present?
-  end
-
-  def flash_helper
-    flash.now[:alert] = "Are you a guru? Verify your Email and Password please"
-  end
-
-  def set_path
-    unless current_user
-      session[:return_to] = request.fullpath
-    end
   end
 end

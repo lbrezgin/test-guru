@@ -1,7 +1,5 @@
 class QuestionsController < ApplicationController
 
-  before_action :set_path
-  before_action :authenticate_user!
   before_action :find_test, except: [:show, :edit, :update, :destroy]
   before_action :find_question, except: [:index, :new, :create]
 

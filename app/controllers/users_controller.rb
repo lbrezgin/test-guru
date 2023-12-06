@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
-  before_action :set_path
+  skip_before_action :authenticate_user!
+
   def new
     @user = User.new
   end

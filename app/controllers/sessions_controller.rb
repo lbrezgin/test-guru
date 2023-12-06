@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+  include SessionsHelper
+
+  skip_before_action :authenticate_user!
+
   def new
   end
 
@@ -7,11 +11,9 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      if session[:return_to].present?
-        redirect_to session[:return_to]
-      end
+      redirect_to session[:return_to] || root_path
     else
-      flash_helper
+      flash_helper(:alert, 'Are you a Guru? Verify your Email and Password please')
       render :new
     end
   end
