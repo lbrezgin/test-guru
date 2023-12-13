@@ -1,0 +1,27 @@
+en:
+  activerecord:
+    models:
+      test: "Test"
+
+    attributes:
+      test:
+        title: "Title"
+        level: "Level"
+        category: "Category"
+      user:
+        email: "Email"
+        password: "Password"
+    errors:
+      models:
+        test:
+          attributes:
+            category:
+              required: "must exist"
+      messages:
+        blank: "Can't be blank"
+        greater_than: "Must be greater than 0"
+        must_exist: "must exist"
+
+  errors:
+    messages:
+      not_saved: "Invalid data: "
