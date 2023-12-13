@@ -1,0 +1,27 @@
+ru:
+  activerecord:
+    models:
+      test: "Тест"
+
+    attributes:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+      user:
+        email: "Почта"
+        password: "Пароль"
+    errors:
+      models:
+        test:
+          attributes:
+            category:
+              required: "должна существовать"
+      messages:
+        blank: "не может иметь пустое значение"
+        greater_than: "должно быть больше 0"
+        must_exist: "должна существовать"
+
+  errors:
+    messages:
+      not_saved: "Данные некорректны: "

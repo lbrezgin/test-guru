@@ -2,15 +2,15 @@ module TestsHelper
   def test_level(test)
     case test.level
     when 0
-      'easy'
+      t('tests_helper.test_level.easy')
     when 1
-      'elementary'
+      t('tests_helper.test_level.elementary')
     when 2
-      'advanced'
+      t('tests_helper.test_level.advanced')
     when 3
-      'hard'
+      t('tests_helper.test_level.hard')
     else
-      'hero'
+      t('tests_helper.test_level.hero')
     end
   end
 end

@@ -1,0 +1,129 @@
+ru:
+  hello: "Привет мир"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+  tests_helper:
+    test_level:
+      easy: "Легко"
+      elementary: "Элементарно"
+      advanced: "Продвинутый"
+      hard: "Тяжело"
+      hero: "Герой"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests:
+    index:
+      header: "Доступные Тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      actions: "Действия"
+    test:
+      start: "Начать"
+
+  test_passages:
+    result:
+      header: "Тест %{title} завершен!"
+      score: "Ваш результат"
+      succes: "Вы успешно прошли тест!"
+      failed: "К сожелению тест не пройден..."
+      back: "Назад"
+    show:
+      passing: "Прохождение теста %{title}"
+      question: "Вопрос: %{question}"
+      question_num: "Вопрос %{quest} из %{all}"
+      next: "Вперед"
+
+  admin:
+    tests:
+      create:
+        success: "Тест успешно создан"
+      index:
+        header: "Доступные Тесты"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        actions: "Действия"
+        new: "Создать новый тест"
+      new:
+        new_test: "Создать новый тест"
+        back: "Назад"
+      test:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirmation: "Вы уверенны?"
+      edit:
+        back: "Назад"
+        edit_test: "Редактировать тест"
+      show:
+        edit: "Редактировать"
+        back: "Назад"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        new_question: "Новый вопрос"
+
+  tests_mailer:
+    completed_test:
+      subject: 'Вы успешно завершили тест на TestGuru!'
+
+  devise:
+    sessions:
+      signed_in: "Вход в систему выполнен."
+      new:
+        head: "Войти во врата Гуру"
+        email: "Почта"
+        password: "Пароль"
+        remember: "Запомнить меня"
+        enter: "Войти"
+    failure:
+      invalid: "Неверная почта или пароль."
+      not_found_in_database: "Неверная почта или пароль."
+      unauthenticated: "Вам необходимо войти в систему или зарегистрироваться."
+    shared:
+      links:
+        login: "Войти"
+        signup: "Зарегистрироваться"
+        forgot_pass: "Забыли пароль"
+        didnt_recive_conf_instr: "Не получили инструкции по подтверждению?"
+        didnt_receive_unlock_instr: "Не получили инструкции по разблокировке?"
+        sign_in_with: "Войти в систему с"
+    registrations:
+      new:
+        header: "Стать гуру"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        email: "Почта"
+        password: "Пароль"
+        password_confirm: "Подтвердить пароль"
+        sign_up: "Зарегистрироваться"
+        pass_min: " символов минимум"
+    confirmations:
+      user:
+        confirmed: "Аккаунт успешно подтвержден"
+      new:
+        header: "Повторно отправить инструкции по подтверждению"
+        email: "Почта"
+        confirm: "Повторно отправить инструкции по подтверждению"
+    passwords:
+      new:
+        password_recovery: "Восстановление пароля"
+        enter_email: "Введите ваш email"
+        submit: "Отправить инструкции по восстановлению пароля"
