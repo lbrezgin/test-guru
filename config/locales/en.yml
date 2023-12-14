@@ -32,6 +32,7 @@ en:
       level: "Level"
       questions: "Questions"
       actions: "Actions"
+      start: "Start"
     test:
       start: "Start"
 
@@ -49,6 +50,8 @@ en:
       next: "Next"
 
   admin:
+    base:
+      not_allowed: "You are not authorized to view this page."
     tests:
       create:
         success: "Test was successfully created"
