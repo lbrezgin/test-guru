@@ -34,6 +34,7 @@ ru:
       level: "Уровень"
       questions: "Вопросы"
       actions: "Действия"
+      start: "Начать"
     test:
       start: "Начать"
 
@@ -51,6 +52,8 @@ ru:
       next: "Вперед"
 
   admin:
+    base:
+      not_allowed: "У вас нет прав доступа к этому разделу сайта."
     tests:
       create:
         success: "Тест успешно создан"
