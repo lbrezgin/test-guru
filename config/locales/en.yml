@@ -1,6 +1,11 @@
 en:
   hello: "Hello world"
 
+  app:
+    services:
+      gist_params:
+        question_about: "Question about a %{test} from TestGuru"
+
   helpers:
     submit:
       test:
@@ -48,8 +53,18 @@ en:
       question: "Question: %{question}"
       question_num: "Question %{quest} from %{all}"
       next: "Next"
+    gist:
+      success: "Gist successfully created! Check it out <a href='%{gist_url}' target='_blank'>here</a>."
+      failure: "An error occurred while saving gist. Error: %{error_message}"
+
 
   admin:
+    gists:
+      index:
+        header: "Gists Table"
+        question: "Question"
+        url: "Gists Url"
+        user: "User"
     base:
       not_allowed: "You are not authorized to view this page."
     tests:
