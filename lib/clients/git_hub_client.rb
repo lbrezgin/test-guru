@@ -11,7 +11,7 @@ class GitHubClient
   def create_gist(params)
     begin
       gist = @octokit_client.create_gist(params)
-      { success: true, gist: gist }
+      { success: true, gist: gist, status: @octokit_client.last_response }
     rescue Octokit::Error => e
       { success: false, error_message: e.message }
     end
@@ -20,7 +20,6 @@ class GitHubClient
   private
 
   def setup_octokit_client
-    Octokit::Client.new(access_token: ENV['GITHUB_TOKEN']
-    )
+    Octokit::Client.new(access_token: ENV['GITHUB_TOKEN'])
   end
 end

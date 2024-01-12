@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-    get 'gists/index'
+    resources :gists, only: %i[create index]
   end
   root 'tests#index'
 
@@ -26,10 +26,6 @@ Rails.application.routes.draw do
         resources :answers, shallow: true
       end
     end
-  end
-
-  namespace :admin do
-    resources :gists, only: [:index]
   end
 end
 

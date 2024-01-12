@@ -55,10 +55,6 @@ ru:
       question: "Вопрос: %{question}"
       question_num: "Вопрос %{quest} из %{all}"
       next: "Вперед"
-    gist:
-      success: "Gist успешно сохранен по <a href='%{gist_url}' target='_blank'>ссылке</a>."
-
-      failure: "Во время сохранения gist произошла ошибка. Ошибка: %{error_message}"
 
   admin:
     gists:
@@ -67,6 +63,10 @@ ru:
         question: "Вопрос"
         url: "Gists Url"
         user: "Пользователь"
+      create:
+        success: "Gist успешно сохранен по <a href='%{gist_url}' target='_blank'>ссылке</a>."
+        failure: "Во время сохранения gist произошла ошибка. Ошибка: %{error_message}"
+
     base:
       not_allowed: "У вас нет прав доступа к этому разделу сайта."
     tests:
