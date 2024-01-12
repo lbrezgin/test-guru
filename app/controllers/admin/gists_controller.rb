@@ -6,9 +6,10 @@ class Admin::GistsController < ApplicationController
     @gists = Gist.all
   end
   def create
-    result = GistQuestionService.new(@test_passage.current_question).call
+    service = GistQuestionService.new(@test_passage.current_question)
+    result = service.call
 
-    if success?(result)
+    if service.success?(result)
       url = result[:gist][:html_url]
       Gist.create(gist_url: url, user: current_user, question: @test_passage.current_question)
 
@@ -21,9 +22,6 @@ class Admin::GistsController < ApplicationController
 
   private
 
-  def success?(res)
-    res[:status].status == 201 && res[:success]
-  end
   def set_test_passage
     @test_passage = TestPassage.find(params[:test_passage])
   end

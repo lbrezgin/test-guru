@@ -9,6 +9,10 @@ class GistQuestionService
     @client.create_gist(gist_params)
   end
 
+  def success?(res)
+    res[:status].status == 201 && res[:success]
+  end
+
   private
 
   def gist_params
