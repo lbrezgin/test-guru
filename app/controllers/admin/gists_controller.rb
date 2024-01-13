@@ -9,7 +9,7 @@ class Admin::GistsController < ApplicationController
     service = GistQuestionService.new(@test_passage.current_question)
     result = service.call
 
-    if service.success?(result)
+    if service.success?
       url = result[:gist][:html_url]
       Gist.create(gist_url: url, user: current_user, question: @test_passage.current_question)
 

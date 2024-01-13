@@ -9,8 +9,8 @@ class GistQuestionService
     @client.create_gist(gist_params)
   end
 
-  def success?(res)
-    res[:status].status == 201 && res[:success]
+  def success?
+    @client.last_response_status == 201
   end
 
   private
@@ -33,3 +33,4 @@ class GistQuestionService
     content.join("\n")
   end
 end
+
