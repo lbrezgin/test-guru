@@ -1,6 +1,11 @@
 ru:
   hello: "Привет мир"
 
+  app:
+    services:
+      gist_params:
+        question_about: "Вопрос о %{test} из TestGuru"
+
   helpers:
     submit:
       test:
@@ -11,13 +16,13 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
-  tests_helper:
-    test_level:
-      easy: "Легко"
-      elementary: "Элементарно"
-      advanced: "Продвинутый"
-      hard: "Тяжело"
-      hero: "Герой"
+    tests_helper:
+      test_level:
+        easy: "Легко"
+        elementary: "Элементарно"
+        advanced: "Продвинутый"
+        hard: "Тяжело"
+        hero: "Герой"
 
   shared:
     errors:
@@ -52,6 +57,16 @@ ru:
       next: "Вперед"
 
   admin:
+    gists:
+      index:
+        header: "Таблица всех созданных Gists"
+        question: "Вопрос"
+        url: "Gists Url"
+        user: "Пользователь"
+      create:
+        success: "Gist успешно сохранен по <a href='%{gist_url}' target='_blank'>ссылке</a>."
+        failure: "Во время сохранения gist произошла ошибка. Ошибка: %{error_message}"
+
     base:
       not_allowed: "У вас нет прав доступа к этому разделу сайта."
     tests:

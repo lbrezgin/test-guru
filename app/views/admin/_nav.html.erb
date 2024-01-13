@@ -1,6 +1,8 @@
 <nav class="navbar navbar-light bg-light">
   <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
   <%= link_to 'Admin Panel', admin_tests_path, class: 'navbar-brand' %>
+  <%= link_to 'Gists Table', admin_gists_path, class: 'navbar-brand' %>
+
   <span class="navbar-text">
     Hello, <strong><%= current_user.first_name %></strong> Guru!
 
