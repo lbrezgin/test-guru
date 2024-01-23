@@ -1,6 +1,11 @@
 <% flash.each do |key, message| %>
-  <div class="alert alert-primary" role="alert">
-    <%= content_tag :p, message.html_safe, class: "flash #{key}" %>
-  </div>
+  <% if key == "alert" %>
+    <div class="alert alert-danger" role="alert">
+      <%= content_tag :p, message.html_safe, class: "flash #{key}" %>
+    </div>
+    <% elsif key == "notice" %>
+      <div class="alert alert-primary" role="alert">
+        <%= content_tag :p, message.html_safe, class: "flash #{key}" %>
+      </div>
+  <% end %>
 <% end %>
- 
