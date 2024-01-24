@@ -1,39 +1,55 @@
-<h2><%= t('.header') %></h2>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Registration</title>
+</head>
+<body>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px;"><%= t('.header') %></h2>
+    <div class="card border-primary">
+      <div class="card-body">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label t('.first_name') %><br />
-    <%= f.text_field :first_name, autofocus: true %>
+          <div class="form-group">
+            <p>
+              <%= f.label t('.first_name') %>
+              <%= f.text_field :first_name, autofocus: true, class: 'form-control' %>
+            </p>
+            <p>
+              <%= f.label t('.last_name') %>
+              <%= f.text_field :last_name, class: 'form-control'%>
+            </p>
+            <p>
+              <%= f.label t('.email') %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+            </p>
+            <p>
+              <%= f.label t('.password') %>
+              <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %><%= t('.pass_min') %>)</em>
+              <% end %>
+              <%= f.password_field :password, autocomplete: "new-password", class: 'form-control', id: 'password' %>
+            </p>
+            <p>
+              <%= f.label t('.password_confirm') %>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control', id: 'password_confirmation' %>
+            <div id="password-match-message"></div>
+            </p>
+            <div style="text-align: center;">
+              <%= f.submit t('.sign_up'), class: 'btn btn-primary w-100' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <%= render "devise/shared/links" %>
   </div>
+</div>
+</body>
+</html>
 
-  <div class="field">
-    <%= f.label t('.last_name') %><br />
-    <%= f.text_field :last_name %>
-  </div>
 
-  <div class="field">
-    <%= f.label t('.email') %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label t('.password') %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %><%= t('.pass_min') %>)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label t('.password_confirm') %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit t('.sign_up') %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

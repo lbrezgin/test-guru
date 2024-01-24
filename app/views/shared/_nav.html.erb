@@ -1,15 +1,16 @@
 <nav class="navbar navbar-light bg-light">
-  <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
+  <%= link_to 'TestGuru', root_path, class: 'navbar-brand margin-left' %>
   <% if current_user && current_user.admin? %>
     <%= link_to 'Admin Panel', admin_tests_path, class: 'navbar-brand' %>
+    <%= link_to 'Gists Table', admin_gists_path, class: 'navbar-brand' %>
   <% end %>
   <span class="navbar-text">
     <% if user_signed_in? %>
       Welcome, <b><%= current_user.first_name %></b> Guru! |
-      <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+      <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'margin-right'%>
     <% else %>
       <%= link_to "Log in", new_session_path(resource_name) %> |
-      <%= link_to "Sign up", new_registration_path(resource_name) %>
+      <%= link_to "Sign up", new_registration_path(resource_name), class: 'margin-right'%>
     <% end %>
   </span>
 </nav>
