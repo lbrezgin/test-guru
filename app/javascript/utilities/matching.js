@@ -4,17 +4,16 @@ document.addEventListener('turbolinks:load', function() {
 });
 
 function checkPasswordMatch() {
-    var password = document.getElementById("password")
-    var password_confirmation = document.getElementById("password_confirmation")
+    var password = document.getElementById("password");
+    var password_confirmation = document.getElementById("password_confirmation");
     var password_match_message = document.getElementById("password-match-message");
 
 
     if (password_confirmation.value === "" || password.value === "") {
-        password_match_message.innerHTML = ""
+        password_match_message.innerHTML = "";
     } else if (password.value === password_confirmation.value) {
-        password_match_message.innerHTML = '<p style="color: green;">Passwords match</p>'
+        password_match_message.innerHTML = '<p style="color: green;">Passwords match</p>';
     } else {
-        password_match_message.innerHTML = '<p style="color: red;">Passwords not match</h1>'
+        password_match_message.innerHTML = '<p style="color: red;">Passwords not match</h1>';
     }
 }
-
