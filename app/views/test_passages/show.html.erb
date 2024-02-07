@@ -1,9 +1,12 @@
+<div id="myProgress">
+  <div id="myBar" data-test-passage-questions="<%= @test_passage.test.questions.count %>" data-test-passage-current-question="<%= actual_question(@test_passage) %>"></div>
+</div>
 <h1><%= t('.passing', title: @test_passage.test.title) %></h1>
 <p>
   <%= t('.question', question: @test_passage.current_question.body) %>
 </p>
 <p>
-  <%= t('.question_num', quest: @test_passage.current_question.id, all: @test_passage.test.questions.count) %>
+  <%= t('.question_num', quest: actual_question(@test_passage), all: @test_passage.test.questions.count) %>
 </p>
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
@@ -11,8 +14,8 @@
       <%= b.check_box id: "answer_ids_#{b.object.id}" %>
       <%= b.label %>
     </p>
-    <% end %>
+  <% end %>
 
   <p><%= link_to 'Gist Question', admin_gists_path(test_passage: @test_passage), method: :post %></p>
-  <p><%= form.submit t('.next') %></p>
+  <p id="next-question"><%= form.submit t('.next') %></p>
 <% end %>

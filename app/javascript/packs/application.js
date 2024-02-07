@@ -7,12 +7,14 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+
 import 'jquery/dist/jquery';
 import '@popperjs/core';
 import 'bootstrap';
 require("/app/javascript/utilities/sorting")
 require("/app/javascript/utilities/matching")
-
+require("/app/javascript/utilities/form_inline")
+require("/app/javascript/utilities/test_progress")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
