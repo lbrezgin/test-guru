@@ -14,6 +14,6 @@ function progressBarFunc() {
 
     const percents = (100.0 / testPassage) * currentQuestion;
 
-    document.getElementById('myBar').style.width = percents + "%";
+    progressBar.style.width = percents + "%";
 }
 
