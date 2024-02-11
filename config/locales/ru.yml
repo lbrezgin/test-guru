@@ -57,6 +57,8 @@ ru:
       next: "Вперед"
 
   admin:
+    form_inline:
+      submit: "OK"
     gists:
       index:
         header: "Таблица всех созданных Gists"
@@ -66,6 +68,7 @@ ru:
       create:
         success: "Gist успешно сохранен по <a href='%{gist_url}' target='_blank'>ссылке</a>."
         failure: "Во время сохранения gist произошла ошибка. Ошибка: %{error_message}"
+
 
     base:
       not_allowed: "У вас нет прав доступа к этому разделу сайта."

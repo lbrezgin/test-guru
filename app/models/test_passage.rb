@@ -7,6 +7,10 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_question, on: [:create, :update]
 
+  def actual_question
+    return (test.questions.index(current_question) + 1)
+  end
+
   def completed?
     current_question.nil?
   end

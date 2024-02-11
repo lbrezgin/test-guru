@@ -1,6 +1,10 @@
 document.addEventListener('turbolinks:load', function() {
-    document.getElementById('password').addEventListener('input', checkPasswordMatch);
-    document.getElementById('password_confirmation').addEventListener('input', checkPasswordMatch);
+    var confirm = document.getElementById("password_confirmation");
+
+    if (confirm) {
+        document.getElementById('password').addEventListener('input', checkPasswordMatch);
+        document.getElementById('password_confirmation').addEventListener('input', checkPasswordMatch);
+    }
 });
 
 function checkPasswordMatch() {
