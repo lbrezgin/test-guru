@@ -8,12 +8,9 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_question, on: [:create, :update]
 
   def actual_question
-    test.questions.each do |passage_question|
-      if (passage_question == current_question)
-        return (test.questions.index(passage_question) + 1)
-      end
-    end
+    return (test.questions.index(current_question) + 1)
   end
+
   def completed?
     current_question.nil?
   end
