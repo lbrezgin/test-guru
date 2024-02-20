@@ -8,6 +8,8 @@ gem 'rails', '~> 6.0.6', '>= 6.0.6.1'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 
+gem 'faraday-retry'
+
 gem 'psych', '< 4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
