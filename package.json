@@ -16,6 +16,9 @@
   "devDependencies": {
     "webpack-dev-server": "^4.15.1"
   },
+  "scripts": {
+    "start": "rails server"
+  },
   "engines": {
     "node": "14.21.3"
   }
