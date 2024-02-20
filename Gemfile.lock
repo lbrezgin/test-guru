@@ -101,6 +101,8 @@ GEM
     faraday-net_http (3.1.0)
       net-http
     ffi (1.16.3)
+    ffi (1.16.3-java)
+    ffi (1.16.3-x86-mingw32)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.14.1)
@@ -152,6 +154,14 @@ GEM
     nokogiri (1.16.2)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    nokogiri (1.16.2-java)
+      racc (~> 1.4)
+    nokogiri (1.16.2-x86-mingw32)
+      racc (~> 1.4)
+    nokogiri (1.16.2-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.2-x86_64-linux)
+      racc (~> 1.4)
     octicons (19.8.0)
     octicons_helper (19.8.0)
       actionview
@@ -163,6 +173,7 @@ GEM
       sawyer (~> 0.9)
     orm_adapter (0.5.0)
     pg (1.5.5)
+    pg (1.5.5-x86-mingw32)
     popper_js (2.11.8)
     psych (3.3.4)
     psych (3.3.4-java)
@@ -330,4 +341,4 @@ RUBY VERSION
    ruby 3.2.0p0
 
 BUNDLED WITH
-   2.4.19
+   2.5.6
