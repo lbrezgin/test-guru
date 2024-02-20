@@ -17,7 +17,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "scripts": {
-    "start": "rails server"
+    "start": "rails server",
+    "watch:dev": "parallelshell \"npm run build\" \"npm run serve\""
   },
   "engines": {
     "node": "14.21.3"
