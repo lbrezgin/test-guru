@@ -283,7 +283,6 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise (~> 4.0)
-  dotenv
   dotenv-rails
   faraday
   faraday-retry

@@ -10,7 +10,7 @@ gem 'pg'
 
 gem 'faraday-retry'
 
-gem 'dotenv', groups: [:development, :test]
+gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'psych', '< 4'
 # Use Puma as the app server
