@@ -12,6 +12,8 @@ gem 'faraday-retry'
 
 gem 'dotenv', groups: [:development, :test]
 
+gem 'rollbar'
+
 gem 'rails_12factor', group: :production
 
 gem 'psych', '< 4'

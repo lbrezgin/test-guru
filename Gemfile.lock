@@ -216,6 +216,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.6)
+    rollbar (3.5.2)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -304,6 +305,7 @@ DEPENDENCIES
   rails (~> 6.0.6, >= 6.0.6.1)
   rails-i18n
   rails_12factor
+  rollbar
   sass-rails (>= 6)
   selenium-webdriver
   spring
