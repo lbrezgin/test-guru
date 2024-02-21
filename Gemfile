@@ -27,7 +27,7 @@ gem 'devise', '~> 4.0'
 
 gem 'octokit'
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv', groups: [:development, :test]
 
 gem 'faraday'
 # Use Active Storage variant
