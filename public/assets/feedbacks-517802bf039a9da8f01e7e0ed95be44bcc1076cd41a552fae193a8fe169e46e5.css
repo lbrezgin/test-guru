@@ -1,0 +1,6 @@
+/* line 5, app/assets/stylesheets/feedbacks.scss */
+#feedback {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
