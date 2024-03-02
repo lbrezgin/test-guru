@@ -5,7 +5,7 @@ class Test < ApplicationRecord
   has_many :users, through: :test_passages
   belongs_to :author, class_name: 'User', foreign_key: 'user_id'
 
-  validates :level, presence: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :level, presence: true , numericality: { only_integer: true, greater_than: 0 }
   validates :title, presence: true, uniqueness: { scope: :level }
 
   scope :by_level, -> (level) { where(level: level) }

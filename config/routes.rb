@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'feedbacks/new'
-  get 'feedbacks/create'
   namespace :admin do
     resources :gists, only: %i[create index]
   end
