@@ -62,6 +62,7 @@ ru:
       question: "Вопрос: %{question}"
       question_num: "Вопрос %{quest} из %{all}"
       next: "Вперед"
+      no_questions: "Данный тест нельзя пройти, он не содержит вопросов."
 
   admin:
     form_inline:

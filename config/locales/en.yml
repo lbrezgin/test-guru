@@ -60,6 +60,8 @@ en:
       question: "Question: %{question}"
       question_num: "Question %{quest} from %{all}"
       next: "Next"
+      no_questions: "It's impossible to complete test, test don't contains any questions."
+
 
   admin:
     form_inline:
