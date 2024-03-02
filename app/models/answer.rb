@@ -10,7 +10,7 @@ class Answer < ApplicationRecord
   private
 
   def validate_question_answers_count
-    if question.answers && question.answers.count >= 4
+    if question.answers.count >= 4
       errors.add(:question, "у этого вопроса уже есть 4 ответа")
     end
   end

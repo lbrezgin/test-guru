@@ -6,6 +6,12 @@ ru:
       gist_params:
         question_about: "Вопрос о %{test} из TestGuru"
 
+  feedbacks:
+    create:
+      send: "Отзыв успешно отправлен!"
+      nosend: "При отправке отзывы произошла ошибка!"
+
+
   helpers:
     submit:
       test:

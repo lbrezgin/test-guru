@@ -6,6 +6,11 @@ en:
       gist_params:
         question_about: "Question about a %{test} from TestGuru"
 
+  feedbacks:
+    create:
+      send: "Feedback sent successfully!"
+      nosend: "Error occurred while sending feedback!"
+
   helpers:
     submit:
       test:

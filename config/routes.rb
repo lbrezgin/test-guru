@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'feedbacks/new'
+  get 'feedbacks/create'
   namespace :admin do
     resources :gists, only: %i[create index]
   end
+
   root 'tests#index'
+
+  resources :feedbacks, only: [:new, :create]
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
 

@@ -1,0 +1,20 @@
+<div class="feedback">
+  <%= form_with model: @feedback do |feedback_form| %>
+    <%= render 'shared/errors', resource: @feedback %>
+    <p>
+      <%= feedback_form.label :name %> <br>
+      <%= feedback_form.text_field :name %>
+    </p>
+    <p>
+      <%= feedback_form.label :email %> <br>
+      <%= feedback_form.text_field :email %>
+    </p>
+    <p>
+      <%= feedback_form.label :message %> <br>
+      <%= feedback_form.text_area :message %>
+    </p>
+    <p>
+      <%= feedback_form.submit "Send Feedback", class: 'btn btn-primary' %>
+    </p>
+  <% end %>
+</div>

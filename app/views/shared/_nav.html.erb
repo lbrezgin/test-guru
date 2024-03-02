@@ -6,6 +6,7 @@
   <% end %>
   <span class="navbar-text">
     <% if user_signed_in? %>
+      <%= link_to 'Feedback', new_feedback_path, class: 'navbar-brand' %>
       Welcome, <b><%= current_user.first_name %></b> Guru! |
       <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'margin-right'%>
     <% else %>
