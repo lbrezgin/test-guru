@@ -2,6 +2,7 @@ class Admin::AnswersController < Admin::BaseController
 
   before_action :find_question, only: %i[new create]
   before_action :set_answer, only: %i[show edit update destroy]
+  before_action :check_test_readiness_in_answers, only: %i[update destroy create edit]
 
   def show
   end
@@ -38,6 +39,14 @@ class Admin::AnswersController < Admin::BaseController
 
   private
 
+  def check_test_readiness_in_answers
+    begin
+      check_test_readiness(@answer.question.test)
+    rescue
+      check_test_readiness(@question.test)
+    end
+  end
+
   def find_question
     @question = Question.find(params[:question_id])
   end
@@ -50,3 +59,4 @@ class Admin::AnswersController < Admin::BaseController
     params.require(:answer).permit(:body, :correct)
   end
 end
+

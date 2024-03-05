@@ -6,6 +6,10 @@ en:
       gist_params:
         question_about: "Question about a %{test} from TestGuru"
 
+  application:
+    check_test_readiness:
+      already_published: "You cannot edit a test once it is published"
+
   feedbacks:
     create:
       send: "Feedback sent successfully!"
@@ -73,8 +77,6 @@ en:
       create:
         success: "Gist successfully created! Check it out <a href='%{gist_url}' target='_blank'>here</a>."
         failure: "An error occurred while saving gist. Error: %{error_message}"
-
-
     base:
       not_allowed: "You are not authorized to view this page."
     tests:
@@ -87,6 +89,8 @@ en:
         questions: "Questions"
         actions: "Actions"
         new: "Create new test"
+        publish: "Publish"
+        remove: "Remove publication"
       new:
         new_test: "Create new test"
         back: "Back"
@@ -105,6 +109,11 @@ en:
         level: "Level"
         questions: "Questions"
         new_question: "New question"
+      update_readiness:
+        no_questions: "You can't publish a test without questions"
+        no_answers: "Questions must have at least one answer"
+        remove_test: "Publication of test removed"
+        publish_test: "Test published successfully"
 
   tests_mailer:
     completed_test:

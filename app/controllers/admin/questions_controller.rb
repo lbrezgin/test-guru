@@ -2,6 +2,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   before_action :find_test, except: [:show, :edit, :update, :destroy]
   before_action :find_question, except: [:index, :new, :create]
+  before_action :check_test_readiness_in_questions, only: %i[update destroy create edit]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
@@ -43,6 +44,14 @@ class Admin::QuestionsController < Admin::BaseController
 
   private
 
+  def check_test_readiness_in_questions
+    begin
+      check_test_readiness(@question.test)
+    rescue
+      check_test_readiness(@test)
+    end
+  end
+
   def find_question
     @question = Question.find(params[:id])
   end
@@ -59,3 +68,4 @@ class Admin::QuestionsController < Admin::BaseController
     render plain: 'Question not found'
   end
 end
+
