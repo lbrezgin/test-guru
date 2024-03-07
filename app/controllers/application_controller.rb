@@ -19,13 +19,18 @@ class ApplicationController < ActionController::Base
   end
 
   protected
-
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :email, :password, :password_confirmation, :first_name, :last_name])
   end
 
   def set_locale
     I18n.locale = I18n.locale_available?(params[:lang]) ? params[:lang] : I18n.default_locale
+  end
+  def check_test_readiness(test)
+    if test.readiness == true
+      redirect_to admin_tests_path
+      flash[:alert] = t("application.check_test_readiness.already_published")
+    end
   end
 end
 

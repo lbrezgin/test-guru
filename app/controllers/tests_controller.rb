@@ -3,7 +3,7 @@ class TestsController < ApplicationController
   before_action :set_test, only: %i[start]
   
   def index
-    @tests = Test.all
+    @tests = Test.where(readiness: true)
   end
 
   def start
@@ -16,5 +16,4 @@ class TestsController < ApplicationController
   def set_test
     @test = Test.find(params[:id])
   end
-
 end

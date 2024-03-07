@@ -6,6 +6,17 @@ ru:
       gist_params:
         question_about: "Вопрос о %{test} из TestGuru"
 
+  application:
+    check_test_readiness:
+      already_published: "Нельзя редактировать тест когда он опубликован"
+
+  feedbacks:
+    create:
+      send: "Отзыв успешно отправлен!"
+      nosend: "При отправке отзывы произошла ошибка!"
+    new:
+      form: "Отправить отзыв"
+
   helpers:
     submit:
       test:
@@ -68,8 +79,6 @@ ru:
       create:
         success: "Gist успешно сохранен по <a href='%{gist_url}' target='_blank'>ссылке</a>."
         failure: "Во время сохранения gist произошла ошибка. Ошибка: %{error_message}"
-
-
     base:
       not_allowed: "У вас нет прав доступа к этому разделу сайта."
     tests:
@@ -82,6 +91,8 @@ ru:
         questions: "Вопросы"
         actions: "Действия"
         new: "Создать новый тест"
+        publish: "Опубликовать"
+        remove: "Удалить публикацию"
       new:
         new_test: "Создать новый тест"
         back: "Назад"
@@ -100,6 +111,11 @@ ru:
         level: "Уровень"
         questions: "Вопросы"
         new_question: "Новый вопрос"
+      update_readiness:
+        no_questions: "Нельзя опубликовать тест без вопросов"
+        no_answers: "У вопросов должен быть хотя бы один ответ"
+        remove_test: "Публикация теста удалена"
+        publish_test: "Тест успешно опубликован"
 
   tests_mailer:
     completed_test:

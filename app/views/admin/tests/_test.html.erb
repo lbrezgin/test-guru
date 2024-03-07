@@ -17,4 +17,6 @@
                 method: :delete,
                 data: { confirm: t('.confirmation') }, class: 'btn btn-primary' %>
   </td>
+  <td><%= link_to test.update_title, update_readiness_admin_test_path(test), method: :patch, class: 'btn btn-primary' %></td>
 </tr>
+
