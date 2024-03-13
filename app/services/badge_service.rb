@@ -6,48 +6,51 @@ class BadgeService
     @test = test_passage.test
   end
 
-  RULES = Badge.rules.values
-
   def give_badge
     Badge.all.each do |badge|
-      if attempt && badge.rule == RULES[0] && @test.title == badge.rule_value
-        @user.badges << (badge)
-      end
-      if all_test_category(@test.category_id) && badge.rule == RULES[1] && @test.category.title == badge.rule_value
-        @user.badges << (badge)
-      end
-      if all_levels(@test.level) && badge.rule == RULES[2] && @test.level == badge.rule_value.to_i
-        @user.badges << (badge)
+      if earned?(badge)
+        @user.badges << (badge) if !@user.badges.include?(badge)
       end
     end
   end
 
   private
 
-  def attempt
-    @user.test_passages.where(test_id: @test.id).count == 1 && (@test_passage.success?)
+  def earned?(badge)
+    send(badge.rule, badge.rule_value)
   end
 
-  def all_test_category(category_id)
-    category_count = Test.all.where(category_id: category_id).count
+  def attempt(test_title)
+    @user.test_passages.where(test_id: @test.id).count == 1 && (@test_passage.success?) && @test.title == test_title
+  end
+
+  def all_test_category(category_title)
+    category_count = Test.sorted_test_names_by_category(category_title).count
     success_category = []
-    @user.test_passages.each do |pass|
-      if pass.success? && pass.test.category_id == category_id
+    TestPassage.success_test_passages.map do |pass|
+      if (pass.test.category.title == category_title) && (pass.user == @user)
         success_category << pass.test
       end
     end
-    category_count == success_category.uniq.count
+    category_count == success_category.uniq.count && @test.category.title == category_title
   end
 
   def all_levels(level)
-    levels_count = Test.all.where(level: level).count
+    levels_count = Test.all.where(level: level.to_i).count
     success_tests = []
-    @user.test_passages.each do |pass|
-      if pass.success? && pass.test.level == level
+    TestPassage.success_test_passages.map do |pass|
+      if (pass.test.level == level.to_i) && (pass.user == @user)
         success_tests << pass.test
       end
     end
     levels_count == success_tests.uniq.count
   end
+
+  def success_test_passages
+    @user.test_passages.map do |pass|
+      pass.success?
+    end
+  end
 end
+
 

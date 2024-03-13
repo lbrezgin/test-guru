@@ -1,10 +1,12 @@
 class TestPassage < ApplicationRecord
+  @@success_test_passages = []
   PASS = 85
 
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
   before_validation :before_validation_set_question, on: [:create, :update]
+
 
   def actual_question
     return (test.questions.index(current_question) + 1)
@@ -27,6 +29,10 @@ class TestPassage < ApplicationRecord
 
   def score
     (correct_questions * 100) / test.questions.count
+  end
+
+  def self.success_test_passages
+    @@success_test_passages
   end
 
   private

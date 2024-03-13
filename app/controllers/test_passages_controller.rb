@@ -12,6 +12,7 @@ class TestPassagesController < ApplicationController
     @test_passage.accept!(params[:answer_ids])
 
     if @test_passage.completed?
+      TestPassage.success_test_passages << @test_passage if @test_passage.success?
       TestsMailer.completed_test(@test_passage).deliver_now
       badge_service = BadgeService.new(@test_passage)
       badge_service.give_badge
