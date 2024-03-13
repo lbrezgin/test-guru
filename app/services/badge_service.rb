@@ -45,12 +45,6 @@ class BadgeService
     end
     levels_count == success_tests.uniq.count
   end
-
-  def success_test_passages
-    @user.test_passages.map do |pass|
-      pass.success?
-    end
-  end
 end
 
 
