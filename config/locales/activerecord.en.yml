@@ -8,6 +8,11 @@ en:
         title: "Title"
         level: "Level"
         category: "Category"
+      badge:
+        title: "Title"
+        file_name: "File name"
+        rule: "Rule"
+        rule_value: "Choose test/category/level"
       user:
         email: "Email"
         password: "Password"

@@ -10,6 +10,18 @@ en:
     check_test_readiness:
       already_published: "You cannot edit a test once it is published"
 
+  badge:
+    rules:
+      attempt: "The badge is issued after successfully passing the test on the first attempt"
+      all_test_category: "The badge is issued after successfully passing all tests of a certain category"
+      all_levels: "The badge is issued after successfully passing all tests of a certain level"
+    index:
+      header: "Badges"
+      title: "Title"
+      file_name: "File name"
+      rule: "Rule"
+      user_badges: "My badges"
+      for: "For"
   feedbacks:
     create:
       send: "Feedback sent successfully!"
@@ -66,6 +78,41 @@ en:
       next: "Next"
 
   admin:
+    badges:
+      create:
+        success: "Badge successfully created!"
+        fail: "Error while saving badge"
+      update:
+        success: "Badge successfully updated!"
+        fail: "Error while updating badge"
+      destroy:
+        success: "Badge successfully destroyed!"
+        fail: "Error while destroying badge"
+      edit:
+        header: "Edit badge"
+        back: "Back"
+      index:
+        header: "Badges control"
+        new: "Create new badge"
+        title: "Title"
+        file_name: "File name"
+        rule: "Rule"
+        actions: "Actions"
+        for: "For"
+      badge:
+        show: "Show"
+        delete: "Delete"
+        edit: "Edit"
+      new:
+        new: "Creat new badge"
+        back: "Back"
+      show:
+        title: "Title"
+        file_name: "Fila name"
+        rule: "Rule"
+        edit: "Edit"
+        back: "Back"
+        for: "For"
     form_inline:
       submit: "OK"
     gists:

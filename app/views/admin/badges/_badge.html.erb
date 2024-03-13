@@ -1,0 +1,13 @@
+<tr>
+  <td><%= badge.title %></td>
+  <td><%= badge.file_name %></td>
+  <td><%= Badge.rules.key(badge.rule) %></td>
+  <td><%= badge.rule_value %></td>
+  <td class="align-middle"><%= link_to t(".show"), admin_badge_path(badge), class: 'btn btn-primary' %></td>
+  <td class="align-middle">
+    <%= link_to t(".delete"),
+                admin_badge_path(badge),
+                method: :delete,
+                data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+  </td>
+</tr>
