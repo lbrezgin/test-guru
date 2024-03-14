@@ -26,10 +26,9 @@ class BadgeService
 
   def all_test_category(category_title)
     category_count = Test.sorted_test_names_by_category(category_title).count
-    success_category = []
-    TestPassage.success_test_passages.map do |pass|
+    success_category = @user.test_passages.where(successful: true).map do |pass|
       if (pass.test.category.title == category_title) && (pass.user == @user)
-        success_category << pass.test
+        pass.test
       end
     end
     category_count == success_category.uniq.count && @test.category.title == category_title
@@ -37,14 +36,12 @@ class BadgeService
 
   def all_levels(level)
     levels_count = Test.all.where(level: level.to_i).count
-    success_tests = []
-    TestPassage.success_test_passages.map do |pass|
+    success_tests = @user.test_passages.where(successful: true).map do |pass|
       if (pass.test.level == level.to_i) && (pass.user == @user)
-        success_tests << pass.test
+        pass.test
       end
     end
     levels_count == success_tests.uniq.count
   end
 end
-
 

@@ -1,5 +1,4 @@
 class TestPassage < ApplicationRecord
-  @@success_test_passages = []
   PASS = 85
 
   belongs_to :user
@@ -29,10 +28,6 @@ class TestPassage < ApplicationRecord
 
   def score
     (correct_questions * 100) / test.questions.count
-  end
-
-  def self.success_test_passages
-    @@success_test_passages
   end
 
   private
