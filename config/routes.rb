@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
 
   root 'tests#index'
-
+  resources :badges, only: [:index]
   resources :feedbacks, only: [:new, :create]
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :badges, :except => [:edit, :update], shallow: true
+
     resources :tests do
       patch :update_inline, on: :member
       patch :update_readiness, on: :member

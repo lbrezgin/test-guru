@@ -8,6 +8,11 @@ ru:
         title: "Название"
         level: "Уровень"
         category: "Категория"
+      badge:
+        title: "Название"
+        file_name: "Файл"
+        rule: "Правило"
+        rule_value: "Выбрите тест/категорию/уровень"
       user:
         email: "Почта"
         password: "Пароль"

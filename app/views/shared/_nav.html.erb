@@ -3,6 +3,9 @@
   <% if current_user && current_user.admin? %>
     <%= link_to 'Admin Panel', admin_tests_path, class: 'navbar-brand' %>
     <%= link_to 'Gists Table', admin_gists_path, class: 'navbar-brand' %>
+    <%= link_to 'Badges control', admin_badges_path, class: 'navbar-brand' %>
+  <% else %>
+    <%= link_to 'Badges', badges_path, class: 'navbar-brand' %>
   <% end %>
   <span class="navbar-text">
     <% if user_signed_in? %>
