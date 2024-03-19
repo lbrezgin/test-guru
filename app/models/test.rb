@@ -8,8 +8,9 @@ class Test < ApplicationRecord
   has_many :users, through: :test_passages, dependent: :destroy
   belongs_to :author, class_name: 'User', foreign_key: 'user_id'
 
-  validates :level, presence: true , numericality: { only_integer: true, greater_than: 0 }
+  validates :level, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validates :title, presence: true, uniqueness: { scope: :level }
+  validate :time_greater_than_zero_or_nil
 
   scope :by_level, -> (level) { where(level: level) }
 
@@ -48,6 +49,12 @@ class Test < ApplicationRecord
         return true
       end
     end
+  end
+
+  def time_greater_than_zero_or_nil
+    return if time.nil? || time > 0
+
+    errors.add(:time, I18n.t("activerecord.models.timer_error"))
   end
 end
 

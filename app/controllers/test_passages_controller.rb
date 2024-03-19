@@ -1,6 +1,6 @@
 class TestPassagesController < ApplicationController
 
-  before_action :set_test_passage, only: %i[show result update gist]
+  before_action :set_test_passage, only: %i[show result update gist remaining_time]
 
   def show
   end
@@ -21,8 +21,16 @@ class TestPassagesController < ApplicationController
       render :show
     end
   end
+  def remaining_time
+    time_limit = @test_passage.test.time
+    start_time = @test_passage.created_at
+    elapsed_time = Time.current - start_time
+    remaining_time_seconds = (time_limit * 60) - elapsed_time
 
-  private
+    remaining_time_seconds = remaining_time_seconds.positive? ? remaining_time_seconds : 0
+
+    render json: { remaining_time: remaining_time_seconds.floor }
+  end
 
   def set_test_passage
     @test_passage = TestPassage.find(params[:id])

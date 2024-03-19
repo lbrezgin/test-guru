@@ -46,6 +46,9 @@ en:
         advanced: "Advanced"
         hard: "Hard"
         hero: "Hero"
+    admin:
+      tests_helper:
+        no_limit: "The test has no time limit"
 
   shared:
     errors:
@@ -156,6 +159,9 @@ en:
         level: "Level"
         questions: "Questions"
         new_question: "New question"
+        category: "Category"
+        time: "Passage time (minutes)"
+
       update_readiness:
         no_questions: "You can't publish a test without questions"
         no_answers: "Questions must have at least one answer"

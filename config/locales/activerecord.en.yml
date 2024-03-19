@@ -2,12 +2,13 @@ en:
   activerecord:
     models:
       test: "Test"
-
+      timer_error: "The passage time must be more than 0 minutes. For a test without a timer, leave the field blank"
     attributes:
       test:
         title: "Title"
         level: "Level"
         category: "Category"
+        time: "Passage time (minutes)"
       badge:
         title: "Title"
         file_name: "File name"

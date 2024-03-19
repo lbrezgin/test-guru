@@ -8,6 +8,7 @@
 <p>
   <%= t('.question_num', quest: @test_passage.actual_question, all: @test_passage.test.questions.count) %>
 </p>
+<h1 id="timer" data-test-passage-id="<%= @test_passage.id %>"></h1>
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
     <p>
