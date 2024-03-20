@@ -13,10 +13,13 @@ document.addEventListener('turbolinks:load', function() {
                     clearInterval(intervalId);
                     window.location.href = `/test_passages/${testPassageId}/result`;
                 } else {
+                    if (remainingTime <= 60) {
+                        timerElement.classList.add('timer-red');
+                    }
                     const hours = Math.floor(remainingTime / 3600);
                     const minutes = Math.floor((remainingTime % 3600) / 60);
                     const seconds = remainingTime % 60;
-                    timerElement.textContent = `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                    timerElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
                 }
             });
     };

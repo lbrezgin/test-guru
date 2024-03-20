@@ -45,3 +45,19 @@
   background-color: #04AA6D;
 }
 
+.timer {
+  display: flex;
+  justify-content: center;
+}
+
+#timer {
+  background-color: darkgrey;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.timer-red {
+  color: red;
+}
