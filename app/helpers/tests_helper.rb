@@ -13,13 +13,5 @@ module TestsHelper
       t('tests_helper.test_level.hero')
     end
   end
-
-  def time_helper(time)
-    if time
-      time
-    else
-      t("helpers.admin.tests_helper.no_limit")
-    end
-  end
 end
 

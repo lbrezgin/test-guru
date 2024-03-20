@@ -2,7 +2,7 @@
   <div id="myBar" data-test-passage-questions="<%= @test_passage.test.questions.count %>" data-test-passage-current-question="<%= @test_passage.actual_question %>"></div>
 </div>
 <div class="timer">
-  <h1 id="timer" data-test-passage-id="<%= @test_passage.id %>"></h1>
+  <h1 id="timer" data-test-time="<%= @test_passage.remaining_time %>"></h1>
 </div>
 <h1><%= t('.passing', title: @test_passage.test.title) %></h1>
 <p>

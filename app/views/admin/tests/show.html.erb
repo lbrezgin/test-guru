@@ -13,7 +13,7 @@
 </p>
 <p>
   <strong><%= t('.time') %></strong>
-  <%= time_helper(@test.time) %>
+  <%= @test.time || t("helpers.admin.tests_helper.no_limit") %>
 </p>
 <h2><%= t('.questions') %></h2>
 

@@ -30,6 +30,14 @@ class TestPassage < ApplicationRecord
     (correct_questions * 100) / test.questions.count
   end
 
+  def time_over?
+    (Time.now - created_at) / 60 >= test.time
+  end
+
+  def remaining_time
+    (test.time * 60) - (Time.now - created_at)
+  end
+
   private
 
   def before_validation_set_question
@@ -55,3 +63,4 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id > ?', current_question.id).first
   end
 end
+

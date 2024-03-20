@@ -81,6 +81,8 @@ ru:
       question: "Вопрос: %{question}"
       question_num: "Вопрос %{quest} из %{all}"
       next: "Вперед"
+    update:
+      time_end: "Время закончилось!"
 
   admin:
     badges:

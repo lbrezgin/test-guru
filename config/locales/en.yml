@@ -79,6 +79,8 @@ en:
       question: "Question: %{question}"
       question_num: "Question %{quest} from %{all}"
       next: "Next"
+    update:
+      time_end: "Time is up!"
 
   admin:
     badges:
