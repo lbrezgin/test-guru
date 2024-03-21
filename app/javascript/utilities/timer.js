@@ -3,10 +3,11 @@ document.addEventListener('turbolinks:load', function() {
     if (!timerElement) return;
 
     let remainingTime = parseInt(timerElement.dataset.testTime);
-
+    const testPassageForm = document.querySelector('form');
     const updateTimer = function() {
         if (remainingTime < 0) {
             clearInterval(intervalId);
+            testPassageForm.submit();
         } else {
             if (remainingTime <= 60) {
                 timerElement.classList.add('timer-red');
