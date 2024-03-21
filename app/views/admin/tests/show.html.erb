@@ -7,7 +7,14 @@
   <strong><%= t('.level') %></strong>
   <%= test_level(@test) %>
 </p>
-
+<p>
+  <strong><%= t('.category') %></strong>
+  <%= @test.category.title %>
+</p>
+<p>
+  <strong><%= t('.time') %></strong>
+  <%= @test.time || t("helpers.admin.tests_helper.no_limit") %>
+</p>
 <h2><%= t('.questions') %></h2>
 
 <%= link_to t('.new_question'), new_admin_test_question_path(@test) %>

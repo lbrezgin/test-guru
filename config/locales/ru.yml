@@ -47,7 +47,9 @@ ru:
         advanced: "Продвинутый"
         hard: "Тяжело"
         hero: "Герой"
-
+    admin:
+      tests_helper:
+        no_limit: "У теста нет ограничений по времени"
   shared:
     errors:
       header:
@@ -79,6 +81,8 @@ ru:
       question: "Вопрос: %{question}"
       question_num: "Вопрос %{quest} из %{all}"
       next: "Вперед"
+    update:
+      time_end: "Время закончилось!"
 
   admin:
     badges:
@@ -159,6 +163,8 @@ ru:
         level: "Уровень"
         questions: "Вопросы"
         new_question: "Новый вопрос"
+        category: "Категория"
+        time: "Время прохождения (в минутах)"
       update_readiness:
         no_questions: "Нельзя опубликовать тест без вопросов"
         no_answers: "У вопросов должен быть хотя бы один ответ"

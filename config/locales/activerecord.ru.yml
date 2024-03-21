@@ -2,12 +2,13 @@ ru:
   activerecord:
     models:
       test: "Тест"
-
+      timer_error: "Время прохождения должно быть больше 0 минут. Для теста без таймера, оставте поле пустым"
     attributes:
       test:
         title: "Название"
         level: "Уровень"
         category: "Категория"
+        time: "Время прохождения (в минутах)"
       badge:
         title: "Название"
         file_name: "Файл"
