@@ -28,6 +28,7 @@ en:
       nosend: "Error occurred while sending feedback!"
     new:
       form: "Send Feedback"
+      new_feedback: "Send feedback"
 
   helpers:
     submit:

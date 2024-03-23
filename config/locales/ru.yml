@@ -29,6 +29,7 @@ ru:
       nosend: "При отправке отзывы произошла ошибка!"
     new:
       form: "Отправить отзыв"
+      new_feedback: "Обратная связь"
 
   helpers:
     submit:

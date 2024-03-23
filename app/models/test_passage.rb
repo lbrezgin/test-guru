@@ -38,6 +38,13 @@ class TestPassage < ApplicationRecord
     (test.time * 60) - (Time.now - created_at)
   end
 
+  def remaining_time_format
+    hours = remaining_time / 3600;
+    minutes = (remaining_time % 3600) / 60
+    seconds = remaining_time % 60
+    "#{hours.floor.to_s.rjust(2, '0')}:#{minutes.floor.to_s.rjust(2, '0')}:#{seconds.floor.to_s.rjust(2, '0')}"
+  end
+
   private
 
   def before_validation_set_question

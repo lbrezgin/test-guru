@@ -1,18 +1,20 @@
-<p>
-  <strong><%= t(".title") %></strong>
-  <%= @badge.title %>
-</p>
+<div class="content">
+  <p>
+    <strong><%= t(".title") %></strong>
+    <%= @badge.title %>
+  </p>
 
-<p>
-  <strong><%= t(".file_name") %></strong>
-  <%= @badge.file_name %>
-</p>
-<p>
-  <strong><%= t(".rule") %></strong>
-  <%= Badge.rules.key(@badge.rule) %>
-</p>
-<p>
-  <strong><%= t(".for") %></strong>
-  <%= @badge.rule_value %>
-</p>
-<%= link_to t(".back"), admin_badges_path %>
+  <p>
+    <strong><%= t(".file_name") %></strong>
+    <%= @badge.file_name %>
+  </p>
+  <p>
+    <strong><%= t(".rule") %></strong>
+    <%= Badge.rules.key(@badge.rule) %>
+  </p>
+  <p>
+    <strong><%= t(".for") %></strong>
+    <%= @badge.rule_value %>
+  </p>
+  <%= link_to t(".back"), admin_badges_path %>
+</div>

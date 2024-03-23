@@ -3,9 +3,9 @@
   <%= render 'shared/errors', resource: @question%>
   <p>
     <%= form.label :body, 'Body' %>
-    <%= form.text_field :body %>
+    <%= form.text_field :body, class: 'form-control' %>
   </p>
   <p>
-    <%= form.submit 'Create' %>
+    <%= form.submit 'Create', class: 'btn btn-primary' %>
   </p>
 <% end %>

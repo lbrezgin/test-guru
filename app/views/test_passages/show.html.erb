@@ -2,23 +2,28 @@
   <div id="myBar" data-test-passage-questions="<%= @test_passage.test.questions.count %>" data-test-passage-current-question="<%= @test_passage.actual_question %>"></div>
 </div>
 <div class="timer">
-  <h1 id="timer" data-test-time="<%= @test_passage.remaining_time %>"></h1>
+  <h1 id="timer" data-test-time="<%= @test_passage.remaining_time %>"><%= @test_passage.remaining_time_format %></h1>
 </div>
-<h1><%= t('.passing', title: @test_passage.test.title) %></h1>
-<p>
-  <%= t('.question', question: @test_passage.current_question.body) %>
-</p>
-<p>
-  <%= t('.question_num', quest: @test_passage.actual_question, all: @test_passage.test.questions.count) %>
-</p>
-<%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
-  <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
-    <p>
-      <%= b.check_box id: "answer_ids_#{b.object.id}" %>
-      <%= b.label %>
-    </p>
+<div class="test-passing">
+  <h1><%= t('.passing', title: @test_passage.test.title) %></h1>
+  <p>
+    <%= t('.question_num', quest: @test_passage.actual_question, all: @test_passage.test.questions.count) %>
+  </p>
+  <h4>
+    <%= t('.question', question: @test_passage.current_question.body) %>
+  </h4>
+    <div class="answers">
+      <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
+        <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
+          <p>
+            <%= b.check_box id: "answer_ids_#{b.object.id}"%>
+            <%= b.label %>
+          </p>
+        <% end %>
+    </div>
+    <p><%= link_to 'Gist Question', admin_gists_path(test_passage: @test_passage), method: :post %></p>
+    <p id="next-question"><%= form.submit t('.next'), class: 'btn btn-primary'%> </p>
   <% end %>
+</div>
 
-  <p><%= link_to 'Gist Question', admin_gists_path(test_passage: @test_passage), method: :post %></p>
-  <p id="next-question"><%= form.submit t('.next') %></p>
-<% end %>
+

@@ -42,7 +42,7 @@
   border-radius: 20px;
   width: 0%;
   height: 30px;
-  background-color: #04AA6D;
+  background-color: #0a58ca;
 }
 
 .timer {
@@ -51,13 +51,67 @@
 }
 
 #timer {
-  background-color: darkgrey;
   margin-top: 20px;
-  padding: 10px;
-  border-radius: 30px;
-  display: inline-block;
 }
 
 .timer-red {
   color: red;
 }
+
+.my-logo {
+  margin-top: 20px;
+  width: 300px;
+  height: auto;
+}
+
+body {
+  background-color: #ececec;
+}
+
+
+ .table {
+   width: 100%;
+   border-collapse: separate;
+   border-spacing: 0 10px;
+   border-radius: 10px;
+   overflow: hidden;
+ }
+
+.table th, .table td {
+  text-align: left;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.table tr:first-child td {
+  border-top: none;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.table tr td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; 
+}
+
+.content {
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

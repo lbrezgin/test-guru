@@ -1,20 +1,30 @@
-<div id="feedback">
-  <%= form_with model: @feedback, local: true do |form| %>
-    <%= render 'shared/errors', resource: @feedback %>
-    <p>
-      <%= form.label :name %> <br>
-      <%= form.text_field :name %>
-    </p>
-    <p>
-      <%= form.label :email %> <br>
-      <%= form.text_field :email %>
-    </p>
-    <p>
-      <%= form.label :message %> <br>
-      <%= form.text_area :message %>
-    </p>
-    <p>
-      <%= form.submit t(".form"), class: 'btn btn-primary' %>
-    </p>
-  <% end %>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px;"><%= t('.new_feedback') %></h2>
+    <div class="card">
+      <div class="card-body">
+        <div id="feedback">
+          <%= form_with model: @feedback, local: true do |form| %>
+            <%= render 'shared/errors', resource: @feedback %>
+            <p>
+              <%= form.label :name %> <br>
+              <%= form.text_field :name, class: 'form-control' %>
+            </p>
+            <p>
+              <%= form.label :email %> <br>
+              <%= form.text_field :email, class: 'form-control' %>
+            </p>
+            <p>
+              <%= form.label :message %> <br>
+              <%= form.text_area :message, class: 'form-control' %>
+            </p>
+            <p>
+              <%= form.submit t(".form"), class: 'btn btn-primary' %>
+            </p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+

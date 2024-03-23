@@ -1,27 +1,27 @@
-<p>
-  <strong><%= t('.title') %></strong>
-  <%= @test.title %>
-</p>
+<div class="content">
+  <p>
+    <strong><%= t('.title') %></strong>
+    <%= @test.title %>
+  </p>
+  <p>
+    <strong><%= t('.level') %></strong>
+    <%= test_level(@test) %>
+  </p>
+  <p>
+    <strong><%= t('.category') %></strong>
+    <%= @test.category.title %>
+  </p>
+  <p>
+    <strong><%= t('.time') %></strong>
+    <%= @test.time || t("helpers.admin.tests_helper.no_limit") %>
+  </p>
+  <h2><%= t('.questions') %></h2>
 
-<p>
-  <strong><%= t('.level') %></strong>
-  <%= test_level(@test) %>
-</p>
-<p>
-  <strong><%= t('.category') %></strong>
-  <%= @test.category.title %>
-</p>
-<p>
-  <strong><%= t('.time') %></strong>
-  <%= @test.time || t("helpers.admin.tests_helper.no_limit") %>
-</p>
-<h2><%= t('.questions') %></h2>
+  <%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
 
-<%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
-
-<ol>
-  <%= render partial: 'admin/questions/question', collection: @test.questions %>
-</ol>
-
-<%= link_to t('.edit'), edit_admin_test_path %>
-<%= link_to t('.back'), admin_tests_path %>
+  <ol>
+    <%= render partial: 'admin/questions/question', collection: @test.questions %>
+  </ol>
+  <%= link_to t('.edit'), edit_admin_test_path %>
+  <%= link_to t('.back'), admin_tests_path %>
+</div>
