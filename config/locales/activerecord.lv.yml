@@ -1,0 +1,42 @@
+lv:
+  activerecord:
+    models:
+      test: "Tests"
+      timer_error: "Testa izpildīšanas laikam jābūt ilgākam par 0 minūtēm. Lai veiktu pārbaudi bez taimera, atstājiet lauku tukšu"
+    attributes:
+      test:
+        title: "Nosaukums"
+        level: "Līmenis"
+        category: "Kategorija"
+        time: "Izpildīšanas laiks (minūtēs)"
+      badge:
+        title: "Nosaukums"
+        file_name: "Fails"
+        rule: "Noteikums"
+        rule_value: "Izvēlieties testu/kategoriju/līmeni"
+      user:
+        email: "E-pasts"
+        password: "Parole"
+      answer:
+        body: "Atbilde"
+        correct: "Pareizā atbilde"
+      question:
+        body: "Jautājums"
+      feedback:
+        name: "Vards"
+        email: "E-pasts"
+        message: "Ziņojums"
+    errors:
+      models:
+        test:
+          attributes:
+            category:
+              required: "Jābūt"
+      messages:
+        blank: "Nevar būt tukšs"
+        greater_than: "Jābūt lielākam par 0"
+        must_exist: "Jābūt"
+
+  errors:
+    messages:
+      not_saved: "Nederīgi dati: "

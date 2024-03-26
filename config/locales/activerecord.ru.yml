@@ -17,6 +17,15 @@ ru:
       user:
         email: "Почта"
         password: "Пароль"
+      answer:
+        body: "Ответ"
+        correct: "Правильный ответ"
+      question:
+        body: "Вопрос"
+      feedback:
+        name: "Имя"
+        email: "Почта"
+        message: "Сообщение"
     errors:
       models:
         test:

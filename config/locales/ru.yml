@@ -48,16 +48,19 @@ ru:
         advanced: "Продвинутый"
         hard: "Тяжело"
         hero: "Герой"
+    questions_helper:
+      question_header:
+        edit: "Редактировать %{test} вопрос"
+        new: "Создать новый %{test} вопрос"
     admin:
       tests_helper:
         no_limit: "У теста нет ограничений по времени"
   shared:
     errors:
-      header:
-        few: "Обнаружено %{count} ошибки"
-        many: "Обнаружено %{count} ошибок"
-        one: "Обнаружено %{count} ошибка"
-        other: "Обнаружено %{count} ошибки"
+      few: "Обнаружено %{count} ошибки"
+      many: "Обнаружено %{count} ошибок"
+      one: "Обнаружено %{count} ошибка"
+      other: "Обнаружено %{count} ошибки"
 
   tests:
     index:
@@ -85,7 +88,53 @@ ru:
     update:
       time_end: "Время закончилось!"
 
+  shared:
+    nav:
+      welcome: "Добро пожаловать %{user} Гуру!"
+
+  layouts:
+    footer:
+      test_guru: "Test Guru - проходи тесты и создавай свои!"
+      author: "Автор:"
+
   admin:
+    questions:
+      show:
+        question: "вопрос"
+        answers: "Ответы"
+        new_answer: "Новый ответ"
+        edit: "Редактировать"
+        back: "Назад"
+      new:
+        back: "Назад"
+      edit:
+        back: "Назад"
+      question:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+        sure: "Вы уверенны?"
+      form:
+        create: "Создать"
+    answers:
+      answer:
+        sure: "Вы уверенны?"
+        show: "Показать"
+        edit: "Редакатировать"
+        delete: "Удалить"
+      form:
+        create: "Создать"
+      new:
+        new_answer: "Новый ответ"
+        back: "Назад"
+      edit:
+        edit_answer: "Редактировать ответ"
+        back: "Назад"
+      show:
+        back: "Назад"
+        question: "Вопрос"
+        answer: "Ответ"
+        correct: "Правильность"
     badges:
       create:
         success: "Бэйдж успешно создан!"
@@ -107,6 +156,8 @@ ru:
         rule: "Правило"
         actions: "Действия"
         for: "Для"
+        sure: "Вы уверенны?"
+        create: "Создать"
       badge:
         show: "Показать"
         delete: "Удалить"

@@ -1,0 +1,7 @@
+<p>Sveiki <%= @resource.email %>!</p>
+
+<p>Jūsu konts ir bloķēts pārmērīgu neveiksmīgu pieteikšanās mēģinājumu dēļ.</p>
+
+<p>Noklikšķiniet uz saites zemāk, lai atbloķētu savu kontu:</p>
+
+<p><%= link_to 'Atbloķējiet manu kontu', unlock_url(@resource, unlock_token: @token) %></p>

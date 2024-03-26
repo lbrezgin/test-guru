@@ -1,23 +1,25 @@
-<nav class="navbar navbar-light bg-light">
-  <%= image_tag("logos/logo.png", class: "my-logo-in-nav") %>
-  <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
+<nav class="navbar my-nav">
+  <%= image_tag("logos/logo2.png", class: "my-logo-in-nav") %>
+  <%= link_to 'TestGuru', root_path, class: 'navbar-brand' if user_signed_in? %>
   <% if current_user && current_user.admin? %>
     <%= link_to 'Admin Panel', admin_tests_path, class: 'navbar-brand' %>
-    <%= link_to 'Gists Table', admin_gists_path, class: 'navbar-brand' %>
+    <%#= link_to 'Gists Table', admin_gists_path, class: 'navbar-brand' %>
     <%= link_to 'Badges control', admin_badges_path, class: 'navbar-brand' %>
-  <% else %>
+  <% elsif current_user && !current_user.admin? %>
     <%= link_to 'Badges', badges_path, class: 'navbar-brand' %>
   <% end %>
-  <span class="navbar-text">
+  <span>
     <% if user_signed_in? %>
       <%= link_to 'Feedback', new_feedback_path, class: 'navbar-brand' %>
-      Welcome, <b><%= current_user.first_name %></b> Guru! |
+      <%= t(".welcome", user: current_user.first_name) %> |
       <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'margin-right'%>
     <% else %>
       <%= link_to "Log in", new_session_path(resource_name) %> |
       <%= link_to "Sign up", new_registration_path(resource_name), class: 'margin-right'%>
     <% end %>
-    <%= link_to "en", url_for(lang: 'en') %>
-    <%= link_to "ru", url_for(lang: 'ru'), class: 'margin-right'%>
+    <%= link_to "en", url_for(lang: 'en') %> |
+    <%= link_to "ru", url_for(lang: 'ru') %> |
+    <%= link_to "lv", url_for(lang: 'lv'), class: 'margin-right' %>
   </span>
 </nav>
+

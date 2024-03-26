@@ -1,12 +1,10 @@
 <div class="content">
   <p>
+    <%= image_tag("badges/#{img(@badge.rule)}", class: "my-badge") %>
+  </p>
+  <p>
     <strong><%= t(".title") %></strong>
     <%= @badge.title %>
-  </p>
-
-  <p>
-    <strong><%= t(".file_name") %></strong>
-    <%= @badge.file_name %>
   </p>
   <p>
     <strong><%= t(".rule") %></strong>

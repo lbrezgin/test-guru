@@ -3,7 +3,6 @@ class Badge < ApplicationRecord
   has_many :badges, through: :user_badges, dependent: :destroy
 
   validates :title, presence: true
-  validates :file_name, presence: true
   validates :rule, presence: true
   validates :rule_value, presence: true
 

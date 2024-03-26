@@ -1,0 +1,272 @@
+lv:
+  hello: "Čau pasaule!"
+
+  app:
+    services:
+      gist_params:
+        question_about: "Jautājums par %{test} no TestGuru"
+
+  application:
+    check_test_readiness:
+      already_published: "Nevar rediģēt testu, kad tas ir publicēts"
+
+  badge:
+    rules:
+      attempt: "Apbalvojums tiek piešķirts pēc testa veiksmīgas nokārtošanas ar pirmo mēģinājumu"
+      all_test_category: "Apbalvojums tiek piešķirts pēc visu noteiktas kategorijas testu veiksmīgas nokārtošanas"
+      all_levels: "Apbalvojums tiek piešķirts pēc visu noteikta līmeņa testu veiksmīgas nokārtošanas"
+    index:
+      all_badges: "Apbalvojumi"
+      title: "Nosaukums"
+      file_name: "Fails"
+      rule: "Noteikums"
+      user_badges: "Mani apbalvojumi"
+      for: "Priekš"
+
+  feedbacks:
+    create:
+      send: "Atsauksme veiksmīgi nosūtīta!"
+      nosend: "Nosūtot atsauksmi, radās kļūda!"
+    new:
+      form: "Nosūtīt atsauksmi"
+      new_feedback: "Atsauksmes"
+
+  helpers:
+    submit:
+      test:
+        create: "Izveidot testu"
+        update: "Atjaunināt testu"
+    label:
+      test:
+        title: "Nosaukums"
+        level: "Līmenis"
+        category_id: "Kategorija"
+    tests_helper:
+      test_level:
+        easy: "Viegli"
+        elementary: "Elementārs"
+        advanced: "Uzlabotas"
+        hard: "Grūts"
+        hero: "Varonis"
+    questions_helper:
+      question_header:
+        edit: "Rediģēt %{test} jautājumu"
+        new: "Izveidot jaunu %{test} jautājumu"
+    admin:
+      tests_helper:
+        no_limit: "Testam nav laika ierobežojumu"
+  shared:
+    errors:
+      few: "%{count} kļūdas"
+      many: "%{count} kļūdas"
+      one: "%{count} kļūdas"
+      other: "%{count} kļūdas"
+
+  tests:
+    index:
+      header: "Visi testi"
+      title: "Nosaukums"
+      level: "Līmenis"
+      questions: "Jautājumi"
+      actions: "Darbības"
+      start: "Sākt"
+    test:
+      start: "Sākt"
+
+  test_passages:
+    result:
+      header: "Tests %{title} pabeigts!"
+      score: "Jūsu rezultāts"
+      succes: "Jūs esat veiksmīgi nokārtojis testu!"
+      failed: "Diemžēl tests nav nokārtots"
+      back: "Atpakaļ"
+    show:
+      passing: "Testa %{title} nokārtošana"
+      question: "Jautājums: %{question}"
+      question_num: "Jautājums %{quest} no %{all}"
+      next: "Tālāk"
+    update:
+      time_end: "Laiks ir beidzies!"
+
+  shared:
+    nav:
+      welcome: "Laipni lūdzam %{user} Guru!"
+
+  layouts:
+    footer:
+      test_guru: "Test Guru - veikt testus un izveidot savus!"
+      author: "Autors:"
+
+  admin:
+    questions:
+      show:
+        question: "jautājums"
+        answers: "Atbildes"
+        new_answer: "Jauna atbilde"
+        edit: "Rediģēt"
+        back: "Atpakaļ"
+      new:
+        back: "Atpakaļ"
+      edit:
+        back: "Atpakaļ"
+      question:
+        show: "Parādīt"
+        edit: "Rediģēt"
+        delete: "Dzēst"
+        sure: "Vai esat pārliecināts?"
+      form:
+        create: "Izveidot"
+    answers:
+      answer:
+        sure: "Vai esat pārliecināts?"
+        show: "Parādīt"
+        edit: "Rediģēt"
+        delete: "Dzēst"
+      form:
+        create: "Izveidot"
+      new:
+        new_answer: "Jauna atbilde"
+        back: "Atpakaļ"
+      edit:
+        edit_answer: "Rediģēt atbildi"
+        back: "Atpakaļ"
+      show:
+        back: "Atpakaļ"
+        question: "Jautājums"
+        answer: "Atbilde"
+        correct: "Pareizība"
+    badges:
+      create:
+        success: "Apbaplvojums veiksmīgi izveidots!"
+        fail: "Neizdevās izveidot apbaplvojumu"
+      update:
+        success: "Apbaplvojums ir veiksmīgi atjaunināts!"
+        fail: "Kļūda Apbaplvojuma atjaunināšanas procesā"
+      destroy:
+        success: "Apbaplvojums veiksmīgi noņemta!"
+        fail: "Kļūda apbaplvojuma dzēšanas procesā"
+      edit:
+        header: "Rediģēt apbaplvojumu"
+        back: "Atpakaļ"
+      index:
+        header: "Apbaplvojumu pārvaldība"
+        new: "Izveidojiet jaunu apbaplvojumu"
+        title: "Nosaukums"
+        file_name: "Fails"
+        rule: "Noteikums"
+        actions: "Darbības"
+        for: "Priekš"
+        sure: "Vai esat pārliecināts?"
+        create: "Izveidot"
+      badge:
+        show: "Parādīt"
+        delete: "Dzēst"
+        edit: "Rediģēt"
+      new:
+        new: "Izveidojiet jaunu apbaplvojumu"
+        back: "Atpakaļ"
+      show:
+        title: "Nosaukums"
+        file_name: "Fails"
+        rule: "Noteikums"
+        edit: "Rediģēt"
+        back: "Atpakaļ"
+        for: "Priekš"
+    form_inline:
+      submit: "OK"
+    gists:
+      index:
+        header: "Visu izveidoto Gists tabula"
+        question: "Jautājums"
+        url: "Gists Url"
+        user: "Lietotājs"
+      create:
+        success: "Gist veiksmīgi saglabāts ar <a href='%{gist_url}' target='_blank'>saite</a>."
+        failure: "Saglabājot gist, radās kļūda. Kļūda: %{error_message}"
+    base:
+      not_allowed: "Jums nav tiesību piekļūt šai vietnes sadaļai."
+    tests:
+      create:
+        success: "Tests ir veiksmīgi izveidots"
+      index:
+        header: "Pieejamie Testi"
+        title: "Nosaukums"
+        level: "Līmenis"
+        questions: "Jautājumi"
+        actions: "Darbības"
+        new: "Izveidojiet jaunu testu"
+        publish: "Publicēt"
+        remove: "Dzēst publikāciju"
+      new:
+        new_test: "Izveidojiet jaunu testu"
+        back: "Atpakaļ"
+      test:
+        show: "Parādīt"
+        edit: "Rediģēt"
+        delete: "Dzēst"
+        confirmation: "Vai esat pārliecināts?"
+      edit:
+        back: "Atpakaļ"
+        edit_test: "Rediģēt testu"
+      show:
+        edit: "Rediģēt"
+        back: "Atpakaļ"
+        title: "Nosaukums"
+        level: "Līmenis"
+        questions: "Jautājumi"
+        new_question: "Jauns jautājums"
+        category: "Kategorija"
+        time: "Laiks (minutēs)"
+      update_readiness:
+        no_questions: "Jūs nevarat publicēt testu bez jautājumiem"
+        no_answers: "Jautājumiem jābūt vismaz vienai atbildei"
+        remove_test: "Teksta publicēšana ir izdzēsta"
+        publish_test: "Tests veiksmīgi publicēts"
+
+  tests_mailer:
+    completed_test:
+      subject: 'Jūs esat veiksmīgi pabeidzis TestGuru testu!'
+
+  devise:
+    sessions:
+      signed_in: "Pieteikšanās veikta."
+      new:
+        head: "Ieiet Guru vārtos"
+        email: "E-pasts"
+        password: "Parole"
+        remember: "Atcerēties mani"
+        enter: "Pieteikties"
+    failure:
+      invalid: "Nepareizs pasts vai parole."
+      not_found_in_database: "Nepareizs pasts vai parole."
+      unauthenticated: "Jums jāpiesakās vai jāreģistrējas."
+    shared:
+      links:
+        login: "Pieteikties"
+        signup: "Reģistrēties"
+        forgot_pass: "Aizmirsāt paroli"
+        didnt_recive_conf_instr: "Nav saņemti apstiprinājuma norādījumi?"
+        didnt_receive_unlock_instr: "Nesaņēma norādījumus par atbloķēšanu?"
+        sign_in_with: "Pieteikties ar"
+    registrations:
+      new:
+        header: "Kļūsti par Guru"
+        first_name: "Vards"
+        last_name: "Uzvards"
+        email: "E-pasts"
+        password: "Parole"
+        password_confirm: "Apstiprināt paroli"
+        sign_up: "Reģistrēties"
+        pass_min: " simboli minimums"
+    confirmations:
+      user:
+        confirmed: "Konts ir veiksmīgi apstiprināts"
+      new:
+        header: "Atkārtoti nosūtiet apstiprinājuma instrukcijas"
+        email: "Pasts"
+        confirm: "Atkārtoti nosūtiet apstiprinājuma instrukcijas"
+    passwords:
+      new:
+        password_recovery: "Paroles atjaunošana"
+        enter_email: "Ievadiet savu e-pastu"
+        submit: "Nosūtīt paroles atkopšanas instrukcijas"
