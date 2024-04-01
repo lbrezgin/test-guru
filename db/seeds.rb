@@ -1,4 +1,4 @@
-admin = Admin.create(first_name: "Admin", last_name: "Admin", email: "admin@gmail.com", password: "qwerty123456789")
+admin = Admin.create(first_name: "Admin", last_name: "Admin", email: "lewickbrez@gmail.com", password: "qwerty123456789")
 
 
 cat1 = Category.create(title: "Matemātika")
