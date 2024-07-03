@@ -1,8 +1,9 @@
 <img width="206" alt="image" src="https://github.com/lbrezgin/test-guru/assets/90979712/bb5e1f83-4473-4761-9b96-bb8ad28271c7">
 
-<h1>Test Guru - a simple website developed using Ruby on Rails as a learning project at the online school Tninknetica.</h1>
+<h1>Test Guru</h1>
 
-<h1>General Website Requirements:</h1>
+<h2>Test Guru - a simple website developed using Ruby on Rails as a learning project at the online school Tninknetica.</h1>
+<h2>General Website Requirements:</h1>
 
 <ol>
     <li>User registration and authentication</li>
