@@ -1,13 +1,7 @@
 <img width="206" alt="image" src="https://github.com/lbrezgin/test-guru/assets/90979712/bb5e1f83-4473-4761-9b96-bb8ad28271c7">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Requirements</title>
-</head>
-<body>
+<h1>Test Guru - a simple website developed using Ruby on Rails as a learning project at the online school Tninknetica.</h1>
+
     <h1>General Website Requirements:</h1>
     <ol>
         <li>User registration and authentication</li>
@@ -54,5 +48,4 @@
         <li>Awards have a title, corresponding image, and criteria (criteria are created by the programmer beforehand) that, when met, awards the user.</li>
         <li>User can view all existing awards and their own awards.</li>
     </ol>
-</body>
-</html>
+
