@@ -2,7 +2,7 @@
 
 <h1>Test Guru</h1>
 
-<p>Test Guru - a simple website developed using Ruby on Rails as a learning project at the online school <a href="https://thinknetica.com" target="_blank">Thinknetica</a></p>
+<p>Test Guru - a simple website developed using Ruby on Rails as a learning project at the online school <a href="https://thinknetica.com" target="_blank">Thinknetica.</a></p>
 <h2>General Website Requirements:</h1>
 
 <ol>
@@ -31,7 +31,7 @@
 <h2>Tests:</h2>
     
 <ol>
-    <li>Test has a title, level, category (categories are created by the programmer beforehand), time limit (or no time limit).</li>
+    <li>Test has a title, level, category, time limit (or no time limit).</li>
     <li>Test can have an unlimited number of questions.</li>
     <li>Test is considered passed if user scores 85% or higher.</li>
 </ol>
@@ -53,7 +53,7 @@
 <h2>Awards:</h2>
 
 <ol>
-    <li>Awards have a title, corresponding image, and criteria (criteria are created by the programmer beforehand) that, when met, awards the user.</li>
+    <li>Awards have a title, corresponding image, and criteria that, when met, awards the user.</li>
     <li>User can view all existing awards and their own awards.</li>
 </ol>
 
