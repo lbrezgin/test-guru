@@ -2,7 +2,7 @@
 
 <h1>Test Guru</h1>
 
-<h2>Test Guru - a simple website developed using Ruby on Rails as a learning project at the online school Tninknetica.</h1>
+<p>Test Guru - a simple website developed using Ruby on Rails as a learning project at the online school <a href="https://thinknetica.com" target="_blank">Thinknetica</a></p>
 <h2>General Website Requirements:</h1>
 
 <ol>
