@@ -1,0 +1,5 @@
+<p>Laipni lūdzam <%= @email %>!</p>
+
+<p>Jūs varat apstiprināt sava konta e-pasta adresi, izmantojot zemāk esošo saiti:</p>
+
+<p><%= link_to 'Apstiprināt kontu', confirmation_url(@resource, confirmation_token: @token) %></p>

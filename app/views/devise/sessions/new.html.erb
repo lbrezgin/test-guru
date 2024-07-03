@@ -1,7 +1,10 @@
+<div style="text-align: center">
+  <%= image_tag("logos/logo.png", class: "my-logo") %>
+</div>
 <div class="row justify-content-center mt-3">
   <div class="col col-md-4">
     <h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px;"><%= t('.head') %></h2>
-    <div class="card border-primary">
+    <div class="card">
       <div class="card-body">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-group">

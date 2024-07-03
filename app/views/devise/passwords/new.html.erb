@@ -1,12 +1,20 @@
-<h2><%= t('.password_recovery') %></h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, placeholder: t('.enter_email') %>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px;"><%= t('.password_recovery') %></h2>
+    <div class="card">
+      <div class="card-body">
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <div class="field">
+            <%= f.label :email %>
+            <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: t('.enter_email') %>
+          </div>
+          <br>
+          <div class="actions">
+            <%= f.submit t('.submit'), class: 'btn btn-primary w-100' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <%= render "devise/shared/links" %>
   </div>
-
-  <div class="actions">
-    <%= f.submit t('.submit') %>
-  </div>
-<% end %>
+</div>

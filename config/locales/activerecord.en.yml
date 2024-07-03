@@ -8,7 +8,7 @@ en:
         title: "Title"
         level: "Level"
         category: "Category"
-        time: "Passage time (minutes)"
+        time: "Passage time (in minutes)"
       badge:
         title: "Title"
         file_name: "File name"
@@ -17,6 +17,15 @@ en:
       user:
         email: "Email"
         password: "Password"
+      answer:
+        body: "Body"
+        correct: "Correct answer"
+      question:
+        body: "Question"
+      feedback:
+        name: "Name"
+        email: "Email"
+        message: "Message"
     errors:
       models:
         test:
