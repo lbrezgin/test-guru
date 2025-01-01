@@ -8,3 +8,4 @@ The project was developed from August 2023 to March 2024. The main goals of this
 * Active Record: Associations and validations.
 * Action Mailer.
 * User registration implemented using the Devise gem.
+* Heroku was used for deployment.
